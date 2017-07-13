@@ -91,7 +91,7 @@ main {
 
 .content p {
   font: 1.2rem/1.8rem 'Open Sans';
-  margin: 1rem 0 0 0; }
+  margin: 1rem 0 1rem; }
 
 .content .link {
   position: relative;
@@ -101,6 +101,10 @@ main {
   width: 100%;
   max-width: 100%;
   display: block; }
+
+.content .way {
+  text-decoration: none;
+  color: #000; }
 
 @media screen and (min-width: 768px) {
   .content {
@@ -128,7 +132,7 @@ main {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(184, 182, 185, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         transition: all 1s;
         bottom: 100%; }
         .gridContainer .content .href::before {
@@ -155,11 +159,29 @@ main {
     display: flex;
     flex-flow: wrap; }
     .bot .gall {
-      width: 25%; }
+      width: 25%;
+      position: relative;
+      overflow: hidden; }
       .bot .gall img {
         width: 100%;
         max-width: 100%;
-        display: block; } }
+        display: block; }
+      .bot .gall .way {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        top: -100%;
+        left: 0;
+        padding: 1rem;
+        transition: top 1s;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        text-decoration: none; }
+    .bot .gall:hover .way {
+      top: 0; } }
 
 footer {
   background: #161616;
@@ -169,7 +191,7 @@ footer {
   footer .foot article {
     margin: 0 0 40px; }
   footer .foot h2 {
-    font: 2rem/2.4rem 'Open Sans';
+    font: 1.8rem/2.2rem 'Open Sans';
     text-transform: uppercase;
     margin: 1rem 0 0 0; }
   footer .foot p {
@@ -203,7 +225,6 @@ footer {
       flex-flow: wrap; }
       footer .foot .bottom {
         width: calc((100% - 80px) / 3);
-        margin: 0 40px 40px 0;
-        border-top: .1rem dotted #bbb; }
+        margin: 0 40px 40px 0; }
         footer .foot .bottom:nth-of-type(3n) {
           margin: 0 0 40px; } }
